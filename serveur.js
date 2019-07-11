@@ -36,6 +36,6 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to Profil app"});
 });
 
-app.listen(8070, () => {
+app.listen(8080, () => {
     console.log("Server is listening on port 8080");
 });

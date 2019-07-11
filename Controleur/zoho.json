@@ -1,8 +1,7 @@
 
 {
-    "id": "1000.JWC48MO5N4ST01580WRV01OIHPIK7H",
-    "secret": "798c4f9daa85b7d1d1d45b97e39d9ddf74a5409363",
-    "redirect": "http://localhost:8070/profil",
-    "scope": "developer.zoho.com",
+    "id": "1000.A1XYACCBVN0T756098GNQLVSSJ3ZXH",
+    "secret": "5d83bc16ce1d59dd1589e09660161a5fff3f97e2b3",
+    "redirect": "http://localhost:5000",
     "location": "com"
 }
