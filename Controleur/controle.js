@@ -19,8 +19,10 @@ const fs = require('fs');
     
     };
     module.exports.posterComment=(req, res, next) => {
-    var username = req.body.username
-    var gmail = req.body.gmail
+    var First_Name = req.body.First_Name;
+    var Last_Name = req.body.Last_Name;
+    var Email= req.body.Email;
+    var Mobile= req.body.Mobile;
         zoho.initialize(config).then((client) => {
             client.API.MODULES.post({
                 module: 'Contacts',
@@ -28,10 +30,10 @@ const fs = require('fs');
                     // Pay ATTENTION! Data is an array!
                     data: [
                       {
-                        First_Name: "e",
-                        Last_Name: "g",
-                        Email: "andrana@gmail.com",
-                        Mobile: "1",
+                        First_Name: First_Name,
+                        Last_Name: Last_Name,
+                        Email: Email,
+                        Mobile: Mobile,
                       }
                     ],
                 },
@@ -46,7 +48,7 @@ const fs = require('fs');
                     id = parseInt(note0[note0.length-1].id)+1;
                 }
 
-            const insert = new Comment({_id:id,data});
+            const insert = new Comment({_id:id,First_Name: First_Name,Last_Name: Last_Name,Email: Email,Mobile: Mobile});
             insert.save()
                 .then(()=>{
                     Comment.find()
@@ -59,7 +61,7 @@ const fs = require('fs');
                 })
             })
                 const { k } = JSON.parse(data.body);
-                console.log({k});
+                console.log(data.body);
                 
     
                 res.json({ k });

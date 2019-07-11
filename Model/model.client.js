@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 
 const commentaireSchema = mongoose.Schema({
   _id:Number,
-  username: String,
-  gmail: String,
-
-
+  First_Name: String,
+  Last_Name: String,
+  Email: String,
+  Mobile:Number
 }, {
   timestamps: true
 });
